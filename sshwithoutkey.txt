@@ -1,0 +1,21 @@
+Ubuntu EC2:
+
+A) Login as root using the keypairs
+
+B) Setup the necessary users and their passwords with
+
+# sudo adduser USERNAME
+# sudo passwd USERNAME
+
+C) Edit /etc/ssh/sshd_config setting
+For a valid user to login with no key
+
+PasswordAuthentication yes
+Also want root to login also with no key
+
+PermitRootLogin yes
+
+D) Restart the ssh daemon with
+
+# sudo service ssh restart
+
